@@ -1,0 +1,16 @@
+.searchForm {
+    background-color: yellow;
+    text-align: center;
+}
+
+.form-inline .form-control {
+    /*    display: inline-block;*/
+}
+
+.searchBar {
+    background-color: purple;
+}
+
+.imgDisplay {
+    background-color: deeppink;
+}
