@@ -29,7 +29,6 @@
             <div class="row imgGallery">
                 <img class="col-md-4" ng-repeat="photo in photos |limitTo:20" ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" />
             </div>
-            <pre>{{photos | json | limitTo:20}}</pre>
         </div>
     </div>
 </body>
