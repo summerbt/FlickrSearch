@@ -1,16 +1,26 @@
 .searchForm {
-    background-color: yellow;
+    /*    background-color: yellow;*/
     text-align: center;
 }
 
-.form-inline .form-control {
-    /*    display: inline-block;*/
+.searchBar {
+    /*    background-color: purple;*/
 }
 
-.searchBar {
-    background-color: purple;
+.imgDisplayComment {
+    /*    background-color: aqua;*/
+    text-align: center;
 }
 
 .imgDisplay {
-    background-color: deeppink;
+    /*    background-color: deeppink;*/
+}
+
+.imgGallery {
+    /*    background-color: limegreen;*/
+    text-align: center;
+}
+
+img {
+    height: 11em;
 }

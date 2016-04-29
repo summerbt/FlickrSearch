@@ -11,22 +11,30 @@
 
 </head>
 
-<body>
+<body ng-controller="flickrSearchControl">
     <div class="row">
         <div class="searchForm col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
             <h1>Flickr Search</h1>
-            <form class="searchBar form-inline form-group">
-                <input type="text" class="searchInput form-control" placeholder="Flickr Search Here">
+            <form class="searchBar form-inline form-group" ng-submit="searchFlickr(searchTerm)">
+                <input type="text" class="searchInput form-control" ng-model="searchTerm" placeholder="Flickr Search Here">
                 <button type="submit" class="searchBtn btn btn-success form-control">Go!</button>
             </form>
         </div>
     </div>
     <div class="row">
-        <div class="imgDisplay col-md-8 col-md-offset-2">something</div>
+        <div class="imgDisplayComment col-md-8 col-md-offset-2">Looking for images of "{{searchTerm | uppercase}}"!</div>
+    </div>
+    <div class="row" ng-if="showResults">
+        <div class="imgDisplay col-md-8 col-md-offset-2">
+            <div class="row imgGallery">
+                <img class="col-md-4" ng-repeat="photo in photos |limitTo:20" ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" />
+            </div>
+            <pre>{{photos | json | limitTo:20}}</pre>
+        </div>
     </div>
 </body>
 
 <script src="js/angular.min.js"></script>
-<script ng-src="js/app.js"></script>
+<script src="js/app.js"></script>
 
 </html>
